@@ -62,9 +62,6 @@ import { DateTime } from './components/datetime/datetime';
 import { FabButton } from './components/fab/fab';
 import { FabContainer } from './components/fab/fab-container';
 import { FabList } from './components/fab/fab-list';
-import { Col } from './components/grid/col';
-import { Grid } from './components/grid/grid';
-import { Row } from './components/grid/row';
 import { Icon } from './components/icon/icon';
 import { Img } from './components/img/img';
 import { InfiniteScroll } from './components/infinite-scroll/infinite-scroll';
@@ -196,13 +193,11 @@ import { VirtualScroll } from './components/virtual-scroll/virtual-scroll';
     CardTitle,
     Checkbox,
     Chip,
-    Col,
     Content,
     DateTime,
     FabButton,
     FabContainer,
     FabList,
-    Grid,
     Img,
     Icon,
     InfiniteScroll,
@@ -239,7 +234,6 @@ import { VirtualScroll } from './components/virtual-scroll/virtual-scroll';
     RangeKnob,
     Refresher,
     RefresherContent,
-    Row,
     Scroll,
     Searchbar,
     Segment,
@@ -297,13 +291,11 @@ import { VirtualScroll } from './components/virtual-scroll/virtual-scroll';
     CardTitle,
     Checkbox,
     Chip,
-    Col,
     Content,
     DateTime,
     FabButton,
     FabContainer,
     FabList,
-    Grid,
     Img,
     Icon,
     InfiniteScroll,
@@ -340,7 +332,6 @@ import { VirtualScroll } from './components/virtual-scroll/virtual-scroll';
     RangeKnob,
     Refresher,
     RefresherContent,
-    Row,
     Scroll,
     Searchbar,
     Segment,
