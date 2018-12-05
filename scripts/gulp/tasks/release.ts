@@ -87,7 +87,7 @@ task('release.publishGithubRelease', (done: Function) => {
   })
   .pipe(obj(function(file, enc, cb) {
     github.releases.createRelease({
-      owner: 'ionic-team',
+      owner: 'expcapitaldev',
       repo: 'ionic',
       target_commitish: 'v3',
       tag_name: 'v' + packageJSON.version,
