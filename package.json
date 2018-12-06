@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "ionic-angular",
+  "name": "ionic-angular-cut",
   "version": "3.9.2",
   "description": "A powerful framework for building mobile and progressive web apps with JavaScript and Angular",
   "keywords": [
@@ -25,7 +25,7 @@
     "link": "gulp release.prepareReleasePackage && cd dist/ionic-angular && npm link",
     "tsc": "tsc --outdir .tmp",
     "preparePackage": "gulp release.prepareReleasePackage",
-    "prepare" : "npm run preparePackage"
+    "prepare": "npm run preparePackage"
   },
   "dependencies": {
     "@angular/common": "4.4.6",
