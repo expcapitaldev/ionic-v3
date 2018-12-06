@@ -1,5 +1,7 @@
 [![npm version](https://badge.fury.io/js/ionic-angular.svg)](https://badge.fury.io/js/ionic-angular)
 
+# DO NOT EXEC npm install LOCALLY - it will replace src by built files
+
 # Ionic
 
 [Ionic](https://ionicframework.com/) is the open-source mobile app development framework that makes it easy to

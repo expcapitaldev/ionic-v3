@@ -69,7 +69,7 @@
     "core-js": "2.5.1",
     "cpr": "2.0.0",
     "cross-spawn": "^5.1.0",
-    "del": "2.2.2",
+    "del": "^2.2.2",
     "dgeni": "^0.4.7",
     "dgeni-packages": "^0.16.10",
     "dotenv": "4.0.0",

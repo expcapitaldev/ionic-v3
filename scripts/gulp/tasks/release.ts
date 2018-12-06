@@ -11,6 +11,7 @@ import * as nodeResolve from 'rollup-plugin-node-resolve';
 import * as runSequence from 'run-sequence';
 import * as semver from 'semver';
 import { obj } from 'through2';
+import * as del from 'del';
 
 import { DIST_BUILD_ROOT, DIST_BUILD_UMD_BUNDLE_ENTRYPOINT, DIST_BUNDLE_ROOT, PROJECT_ROOT, SCRIPTS_ROOT, SRC_ROOT } from '../constants';
 import { compileSass, copyFonts, createTimestamp, setSassIonicVersion, writePolyfills } from '../util';
@@ -205,6 +206,9 @@ task('release.prepareReleasePackage', (done: (err: any) => void) => {
           'release.fonts',
           'release.sass',
           'release.createUmdBundle',
+          'clean:src',
+          'copy:dist',
+          'clean:dist',
           done);
 });
 
@@ -327,4 +331,38 @@ task('release.nightlyPackageJson', () => {
 
   writeFileSync(`${DIST_BUILD_ROOT}/package.json`, JSON.stringify(packageJson, null, 2));
   setSassIonicVersion(packageJson.version);
+});
+
+task('copy:dist', function() {
+  return src('dist/ionic-angular/**/*.*')
+    .pipe(dest('./'));
+});
+
+task('clean:src', function () {
+  return del([
+    '.circleci/',
+    '.github/',
+    '.scss-linters/',
+    'demos/',
+    'scripts/',
+    'src/',
+    '.editorconfig',
+    '.gitignore',
+    '.scss-lint.yml',
+    'LICENCE',
+    'package.js',
+    'package-lock.js',
+    '*.*',
+  ]);
+});
+
+task('clean:dist', function () {
+  return del([
+    '.scss-lint.yml',
+    'LICENCE',
+    'package-lock.js',
+    'dist/',
+    'node_modules/',
+    '!node_modules/@types/del/**/*.*',
+  ]);
 });
