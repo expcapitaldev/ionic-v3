@@ -23,7 +23,9 @@
     "test": "gulp validate",
     "test:generators": "jasmine-node ./tooling/spec",
     "link": "gulp release.prepareReleasePackage && cd dist/ionic-angular && npm link",
-    "tsc": "tsc --outdir .tmp"
+    "tsc": "tsc --outdir .tmp",
+    "preparePackage": "gulp release.prepareReleasePackage",
+    "prepare" : "npm run preparePackage"
   },
   "dependencies": {
     "@angular/common": "4.4.6",
